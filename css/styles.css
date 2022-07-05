@@ -1,0 +1,227 @@
+/* HEADER */
+
+header{
+    padding: 10px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__logo{
+    height: 45px;
+}
+
+.header__nav{
+    height: 45px;    
+}
+
+.header__nav__menu{
+    display:inline-block;
+}
+
+.header__nav__menu__link{
+    margin: 0 10px 0 10px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+}
+
+/* MAIN */
+
+main{
+    padding: 10px;
+}
+
+h2{
+    display: inline;
+}
+
+/* SECCIONES */
+
+.main__section__principal{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 500px;
+    background-image: url(../images/home_flor.jpg);
+    background-size: cover;
+    width: 100%;
+}
+
+.section__margin{
+    margin-top: 30px;
+}
+
+.main__section__principal__image{
+    width: 50px;
+    display: flex;
+    align-items: inherit;
+}
+
+.main__section__principal__text{
+    text-align: center;
+    color: white;
+}
+
+.main__section__galeria{
+    display:flex;
+    flex-direction: row;
+}
+
+.main__section__galeria__instagram{
+    width: 50%;
+    height: 420px;
+}
+
+.main__section__videos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main__section__videos__iframe{
+    width: 720px;
+    height: 400px;
+    margin: 5px;
+}
+
+.main__section__images{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main__section__images.servicios{
+    justify-content: space-between;
+}
+
+.main__section__subsection__servicios{
+    padding: 5px;
+}
+
+h2.main__section__subsection__servicios__titulo{
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main__section__subsection__servicios__descripcion{
+    margin: 0 10px 0 10px;
+}
+
+.main__section__subsection__images__img{
+    width: 100%;
+    height: 90%;
+}
+
+.main__section__subsection__images{
+	position: relative;
+	float: left;
+	height: 300px;
+	padding: 0;
+}
+
+.main__section__subsection__images div span{
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 95%;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+
+/* ELEMENTOS DE LAS SECCIONES */
+
+figure{
+	width: 350px;
+	height: 300px;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+
+figure.main__section__subsection__images__figure{
+    width: 730px;
+	height: 300px;
+}
+
+figure:hover+span{
+	bottom: -30px;
+	opacity: 1;
+}
+
+.hover figure img{
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.hover figure:hover img{
+	opacity: .5;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 30px;
+    border-top: solid 1px black;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_image{
+    height: 25px;
+}
+
+/* FORMULARIO */
+
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:1px;
+}
+
+form {
+    margin:0 auto;
+    width:400px;
+}
+
+input, textarea {
+    width:380px;
+    height:27px;
+    background:#aaaaaa;
+    border:2px solid #f6f6f6;
+    padding:10px;
+    margin-top:5px;
+    font-size:10px;
+    color:#ffffff;
+}
+
+input::placeholder, textarea::placeholder{
+    color:#f6f6f6;
+}
+
+textarea {
+    height:150px;
+}
+
+#submit {
+    width:85px;
+    height:35px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
