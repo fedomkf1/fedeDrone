@@ -49,10 +49,6 @@ h2{
     width: 100%;
 }
 
-.section__margin{
-    margin-top: 30px;
-}
-
 .main__section__principal__image{
     width: 50px;
     display: flex;
@@ -87,6 +83,54 @@ h2{
     margin: 5px;
 }
 
+.main__section__servicios__videos{
+    display: grid;
+    width: 80vw;
+    height: 80vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas:"obelisco texto-video texto-video"
+                        "obelisco reserva reserva"
+                        "obelisco reserva reserva"
+}          
+
+.main__section__servicios__fotos{
+    display: grid;
+    width: 80vw;
+    height: 80vh;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas:"texto-foto bodega"
+                        "plaza-mendoza bodega"
+}
+
+.fotos__grid{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+}
+
+.obelisco{
+    grid-area: obelisco;
+    background-image: url("../images/obelisco.png");
+}
+
+.reserva{
+    grid-area: reserva;
+    background-image: url("../images/videos_en_altura.png");
+}
+
+.bodega{
+    grid-area: bodega;
+    background-image: url("../images/vinotecas.jpg");
+}
+
+.plaza-mendoza{
+    grid-area: plaza-mendoza;
+    background-image: url("../images/plaza-mendoza.png");
+}
+
 .main__section__images{
     display:flex;
     flex-direction: row;
@@ -94,7 +138,7 @@ h2{
 }
 
 .main__section__images.servicios{
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .main__section__subsection__servicios{
@@ -150,11 +194,6 @@ figure{
 	padding: 0;
 	background: #fff;
 	overflow: hidden;
-}
-
-figure.main__section__subsection__images__figure{
-    width: 730px;
-	height: 300px;
 }
 
 figure:hover+span{
@@ -224,4 +263,127 @@ textarea {
     border:none;
     margin-top:20px;
     cursor:pointer;
+}
+
+
+/* MEDIA DE CELULAR */
+@media (min-width: 320px) and (max-width:575px) {
+    
+    /* header */
+    header{
+        padding: 10px;
+        display: block;
+    }
+
+    .header__mobile{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .header__logo{
+        height: 30px;
+    }
+
+    .header__nav{
+        height: 40px;    
+    }
+
+    .header__nav__menu__link{
+        font-size: 10px;
+    }
+
+    /* home */
+    .main__section__principal{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    figure{
+        width: 240px;
+    }
+
+    /* galeria y home */ 
+    .display__mobile{
+        display: none;
+    }
+
+    /* footer */
+    footer{
+        margin-top: 0;
+        display:block;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer__mobile{
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .footer_image{
+        margin: 0 10px 0 10px;
+    }
+
+    /* servicios */
+    .main__section__servicios__videos{
+        display: grid;
+        width: 80vw;
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:"texto-video"
+                            "obelisco"
+    }          
+    
+    .main__section__servicios__fotos{
+        display: grid;
+        width: 80vw;
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:"texto-foto"
+                            "bodega"
+    }
+
+    /* galeria */
+    .instagram-media{
+        min-width: 285px !important;
+    }
+
+    /* formulario */
+    form {
+        width: 250px;
+    }
+    
+    input, textarea {
+        width: 230px;
+    }
+
+    /* videos */
+    .main__section__videos__iframe{
+        width: 285px;
+        height: 160px;
+    }
+}
+
+/* MEDIA DE TABLET */
+@media (min-width: 576px) and (max-width:992px) {
+
+    /* home */
+    figure{
+        width: 240px;
+    }
+
+    /* galeria */
+    .display__tablet{
+        display: none;
+    }
+
+    /* videos */
+    .main__section__videos__iframe{
+        width: 285px;
+    }
 }
