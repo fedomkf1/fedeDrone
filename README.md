@@ -1,5 +1,3 @@
-# fedeDrone
-
 ## Cuso de Desarrollo web de CoderHose
 
 ### Conceptos aplicados
