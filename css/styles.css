@@ -1,7 +1,6 @@
 /* HEADER */
 
 header{
-    padding: 10px;
     display:flex;
     justify-content: space-around;
     align-items: center;
@@ -9,28 +8,16 @@ header{
 
 .header__logo{
     height: 45px;
-}
-
-.header__nav{
-    height: 45px;    
-}
-
-.header__nav__menu{
-    display:inline-block;
-}
-
-.header__nav__menu__link{
-    margin: 0 10px 0 10px;
-    text-transform: uppercase;
-    color: black;
-    text-decoration: none;
-    transform: scale(1.10,1.10);
-    transition: all 1s;
+    vertical-align: baseline;
 }
 
 .menu__hover:hover{
     transform: scale(1.10,1.10);
     transition: all 1s;
+}
+
+.navbar-brand{
+    margin-right: 200px;
 }
 
 /* MAIN */
@@ -39,27 +26,34 @@ main{
     padding: 10px;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-weight: 300;
+}
+
 h2{
     display: inline;
+}
+
+.text__home__white{
+    color: white;
 }
 
 /* SECCIONES */
 
 .main__section__principal{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
     margin-bottom: 20px;
     height: 500px;
     background-image: url(../images/home_flor.jpg);
     background-size: cover;
-    width: 100%;
+}
+
+
+.main__section__principal__home{
+    align-items: center;
 }
 
 .main__section__principal__image{
-    width: 50px;
-    display: flex;
-    align-items: inherit;
+    width: 50%;
 }
 
 .main__section__principal__text{
@@ -300,6 +294,10 @@ textarea {
         font-size: 10px;
     }
 
+    .navbar-brand{
+        margin-right: auto;
+    }
+
     /* home */
     .main__section__principal{
         background-position: center;
@@ -311,10 +309,15 @@ textarea {
         width: 240px;
     }
 
+    .main__section__principal__image{
+        width: 20%;
+    }
+
     /* galeria y home */ 
     .display__mobile{
         display: none;
     }
+    
 
     /* footer */
     footer{
@@ -358,6 +361,12 @@ textarea {
     /* galeria */
     .instagram-media{
         min-width: 285px !important;
+    }
+
+
+    .carousel-item {
+        width: 640px; 
+        height: 360px; 
     }
 
     /* formulario */

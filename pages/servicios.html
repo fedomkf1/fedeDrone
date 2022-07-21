@@ -1,74 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Servicios</title>
-</head>
-<body>
-    <header>
-        <div class="header__mobile">
-            <a href="../index.html"><img class="header__logo" src="../images/fede_drone_logo.png"></a>
-        </div>
-        <nav class="header__nav">
-            <ul>
-                <li class="header__nav__menu menu__hover"><a class="header__nav__menu__link" href="../index.html">Home</a></li>
-                <li class="header__nav__menu menu__hover"><a class="header__nav__menu__link" href="../pages/servicios.html">Servicios</a></li>
-                <li class="header__nav__menu menu__hover"><a class="header__nav__menu__link" href="../pages/galeria.html">Galeria</a></li>
-                <li class="header__nav__menu menu__hover"><a class="header__nav__menu__link" href="../pages/videos.html">Videos</a></li>
-                <li class="header__nav__menu menu__hover"><a class="header__nav__menu__link" href="../pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="main__section__principal">
-            <div class="main__section__principal__text">
-                <h1>Servicios</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../images/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script async src="https://www.instagram.com/embed.js"></script>
+        <title>Servicios</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img class="header__logo" src="../images/fede_drone_logo.png" alt="fedeDrone logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link menu__hover" href="../pages/servicios.html"> SERVICIOS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu__hover" href="../pages/galeria.html"> GALERIA </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu__hover" href="../pages/videos.html"> VIDEOS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu__hover" href="../pages/contacto.html"> CONTACTO </a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container-fluid text-center main__section__principal d-flex align-items-center justify-content-center">
+                <div class="row row-cols-1 justify-content-md-center main__section__principal__home">
+                    <div class=" text__home__white">
+                        <h1>Servicios</h1>
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section class="main__section__images servicios">
-            <div class="main__section__servicios__videos">
-                <div class="obelisco fotos__grid" alt="Foto Obelisco"></div>
-                <div class="texto-video">
-                    <h2 class="main__section__subsection__servicios__titulo">Videos en Altura</h2>
-                    <div class="main__section__subsection__servicios__descripcion">
-                        <p>Se realizan tomas aéreas profesionales para diversos eventos como documentales, vídeos corporativos, spots publicitarios y grandes eventos. 
-                            Mediante el uso de la última tecnología en drones y equipos de filmación aérea.
-                        </p>
-                        <p>Contamos con la ventaja de grabar en 4K, Full HD 50 o 60fps y en HD 120 fps.
-                        </p>
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-6">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="../images/carrousel/puertoMadero_2.jpg" class="card-img-top" alt="fotografias en altura">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Videos en Altura</h5>
+                                    <p class="card-text">Se realizan tomas aéreas profesionales para diversos eventos como documentales, vídeos corporativos, spots publicitarios y grandes eventos. 
+                                        Mediante el uso de la última tecnología en drones y equipos de filmación aérea.
+                                    </p>
+                                    <p class="card-text">Contamos con la ventaja de grabar en 4K, Full HD 50 o 60fps y en HD 120 fps.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fotografia Aerea</h5>
+                                    <p class="card-text">Servicios profesionales de fotografía y filmaciones aéreas con el uso de drones en alta definición.
+                                        Realizamos diferentes tomas aéreas con equipos de alta definición.
+                                    </p>
+                                    <p class="card-text">Las fotografías aéreas se pueden obtener en todas las situaciones de iluminación (desde el amanecer hasta el atardecer).
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../images/carrousel/vinotecas_1.jpg" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="../images/carrousel/potrerillos_4.jpg" class="card-img-top" alt="fotografias en altura">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Edicion de Video</h5>
+                                    <p class="card-text">Editamos tu video para que puedas compartirlo en redes sociales, y puedas tener mayor impacto en tus presentaciones con videos de calidad 4k.</p>
+                                    <p class="card-text">Nos adaptamos a tus necesidades, y compartimos mas las mejores practicas para ediciones de corto y largometrajes.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="reserva fotos__grid" alt="Foto Reserva"></div>
             </div>
-        </section>
-        <section class="main__section__images servicios">
-            <div class="main__section__servicios__fotos">
-                <div class="main__section__subsection__servicios texto-foto">
-                    <h2 class="main__section__subsection__servicios__titulo">Fotografia Aerea</h2>
-                    <div class="main__section__subsection__servicios__descripcion">
-                        <p>Servicios profesionales de fotografía y filmaciones aéreas con el uso de drones en alta definición.
-                            Realizamos diferentes tomas aéreas con equipos de alta definición.
-                        </p>
-                        <p>Las fotografías aéreas se pueden obtener en todas las situaciones de iluminación (desde el amanecer hasta el atardecer).
-                        </p>
-                    </div>
-                </div>
-                <div class="bodega fotos__grid" alt="Foto Bodegas"></div>
-                <div class="plaza-mendoza fotos__grid" alt="Foto Plaza Mendoza"></div>
+        </main>
+        <footer>
+            <p>Copyright © 2022 | Creado por FedePeralta</p>
+            <div class="footer__mobile">
+                <a href="https://www.youtube.com/channel/UCE9oAJA5_aczQ7FUiofKCWg?app=desktop"><img class="footer_image" src="../images/youtube.png"></a>
+                <a href="https://www.instagram.com/fededrone/"><img class="footer_image" src="../images/insta.png"></a>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>Copyright © 2022 | Creado por FedePeralta</p>
-        <div class="footer__mobile">
-            <a href="https://www.youtube.com/channel/UCE9oAJA5_aczQ7FUiofKCWg?app=desktop"><img class="footer_image" src="../images/youtube.png"></a>
-            <a href="https://www.instagram.com/fededrone/"><img class="footer_image" src="../images/insta.png"></a>
-        </div>
-    </footer>
-</body>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
 </html>
