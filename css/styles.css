@@ -216,14 +216,24 @@ figure:hover+span{
 
 footer{
     margin-top: 30px;
+    padding-bottom: 10px;
     border-top: solid 1px black;
     display:flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
 }
 
 .footer_image{
     height: 25px;
+}
+
+.footer__text{
+    margin-top: inherit;
+    
+}
+
+.footer__link{
+    display: initial;
 }
 
 /* FORMULARIO */
@@ -256,6 +266,7 @@ input::placeholder, textarea::placeholder{
 
 textarea {
     height:150px;
+    resize:none;
 }
 
 #submit {
@@ -322,6 +333,7 @@ textarea {
     /* footer */
     footer{
         margin-top: 0;
+        padding: 2px;
         display:block;
         justify-content: space-around;
         align-items: center;
@@ -400,6 +412,6 @@ textarea {
 
     /* videos */
     .main__section__videos__iframe{
-        width: 285px;
+        width: 470px;
     }
 }
