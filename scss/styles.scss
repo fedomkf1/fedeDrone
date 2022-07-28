@@ -1,0 +1,417 @@
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__logo{
+    height: 45px;
+    vertical-align: baseline;
+}
+
+.menu__hover:hover{
+    transform: scale(1.10,1.10);
+    transition: all 1s;
+}
+
+.navbar-brand{
+    margin-right: 200px;
+}
+
+/* MAIN */
+
+main{
+    padding: 10px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-weight: 300;
+}
+
+h2{
+    display: inline;
+}
+
+.text__home__white{
+    color: white;
+}
+
+/* SECCIONES */
+
+.main__section__principal{
+    margin-bottom: 20px;
+    height: 500px;
+    background-image: url(../images/home_flor.jpg);
+    background-size: cover;
+}
+
+
+.main__section__principal__home{
+    align-items: center;
+}
+
+.main__section__principal__image{
+    width: 50%;
+}
+
+.main__section__principal__text{
+    text-align: center;
+    color: white;
+}
+
+.main__section__galeria{
+    display:flex;
+    flex-direction: row;
+}
+
+.main__section__galeria__instagram{
+    width: 50%;
+    height: 420px;
+}
+
+.main__section__videos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main__section__videos__iframe{
+    width: 720px;
+    height: 400px;
+    margin: 5px;
+}
+
+.main__section__servicios__videos{
+    display: grid;
+    width: 80vw;
+    height: 80vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas:"obelisco texto-video texto-video"
+                        "obelisco reserva reserva"
+                        "obelisco reserva reserva"
+}          
+
+.main__section__servicios__fotos{
+    display: grid;
+    width: 80vw;
+    height: 80vh;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas:"texto-foto bodega"
+                        "plaza-mendoza bodega"
+}
+
+.fotos__grid{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+}
+
+.obelisco{
+    grid-area: obelisco;
+    background-image: url("../images/obelisco.png");
+}
+
+.reserva{
+    grid-area: reserva;
+    background-image: url("../images/videos_en_altura.png");
+}
+
+.bodega{
+    grid-area: bodega;
+    background-image: url("../images/vinotecas.jpg");
+}
+
+.plaza-mendoza{
+    grid-area: plaza-mendoza;
+    background-image: url("../images/plaza-mendoza.png");
+}
+
+.main__section__images{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main__section__images.servicios{
+    justify-content: center;
+}
+
+.main__section__subsection__servicios{
+    padding: 5px;
+}
+
+h2.main__section__subsection__servicios__titulo{
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main__section__subsection__servicios__descripcion{
+    margin: 0 10px 0 10px;
+}
+
+.main__section__subsection__images__img{
+    width: 100%;
+    height: 90%;
+}
+
+.main__section__subsection__images{
+	position: relative;
+	float: left;
+	height: 300px;
+	padding: 0;
+}
+
+.main__section__subsection__images div span{
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 95%;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+
+/* ELEMENTOS DE LAS SECCIONES */
+
+figure{
+	width: 350px;
+	height: 300px;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+
+figure:hover+span{
+	bottom: -30px;
+	opacity: 1;
+}
+
+.hover figure img{
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.hover figure:hover img{
+	opacity: .5;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-top: solid 1px black;
+    display:flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.footer_image{
+    height: 25px;
+}
+
+.footer__text{
+    margin-top: inherit;
+    
+}
+
+.footer__link{
+    display: initial;
+}
+
+/* FORMULARIO */
+
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:1px;
+}
+
+form {
+    margin:0 auto;
+    width:400px;
+}
+
+input, textarea {
+    width:380px;
+    height:27px;
+    background:#aaaaaa;
+    border:2px solid #f6f6f6;
+    padding:10px;
+    margin-top:5px;
+    font-size:10px;
+    color:#ffffff;
+}
+
+input::placeholder, textarea::placeholder{
+    color:#f6f6f6;
+}
+
+textarea {
+    height:150px;
+    resize:none;
+}
+
+#submit {
+    width:85px;
+    height:35px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+
+/* MEDIA DE CELULAR */
+@media (min-width: 320px) and (max-width:575px) {
+    
+    /* header */
+    header{
+        padding: 10px;
+        display: block;
+    }
+
+    .header__mobile{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .header__logo{
+        height: 30px;
+    }
+
+    .header__nav{
+        height: 40px;    
+    }
+
+    .header__nav__menu__link{
+        font-size: 10px;
+    }
+
+    .navbar-brand{
+        margin-right: auto;
+    }
+
+    /* home */
+    .main__section__principal{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    figure{
+        width: 240px;
+    }
+
+    .main__section__principal__image{
+        width: 20%;
+    }
+
+    /* galeria y home */ 
+    .display__mobile{
+        display: none;
+    }
+    
+
+    /* footer */
+    footer{
+        margin-top: 0;
+        padding: 2px;
+        display:block;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer__mobile{
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .footer_image{
+        margin: 0 10px 0 10px;
+    }
+
+    /* servicios */
+    .main__section__servicios__videos{
+        display: grid;
+        width: 80vw;
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:"texto-video"
+                            "obelisco"
+    }          
+    
+    .main__section__servicios__fotos{
+        display: grid;
+        width: 80vw;
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:"texto-foto"
+                            "bodega"
+    }
+
+    /* galeria */
+    .instagram-media{
+        min-width: 285px !important;
+    }
+
+
+    .carousel-item {
+        width: 640px; 
+        height: 360px; 
+    }
+
+    /* formulario */
+    form {
+        width: 250px;
+    }
+    
+    input, textarea {
+        width: 230px;
+    }
+
+    /* videos */
+    .main__section__videos__iframe{
+        width: 285px;
+        height: 160px;
+    }
+}
+
+/* MEDIA DE TABLET */
+@media (min-width: 576px) and (max-width:992px) {
+
+    /* home */
+    figure{
+        width: 240px;
+    }
+
+    /* galeria */
+    .display__tablet{
+        display: none;
+    }
+
+    /* videos */
+    .main__section__videos__iframe{
+        width: 470px;
+    }
+}
