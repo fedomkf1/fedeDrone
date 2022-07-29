@@ -1,5 +1,4 @@
 /* HEADER */
-
 header{
     display:flex;
     justify-content: space-around;
@@ -21,7 +20,6 @@ header{
 }
 
 /* MAIN */
-
 main{
     padding: 10px;
 }
@@ -173,10 +171,7 @@ h2.main__section__subsection__servicios__titulo{
     }
 }
 
-// .main__section__subsection__images 
-
 /* ELEMENTOS DE LAS SECCIONES */
-
 figure{
 	width: 350px;
 	height: 300px;
@@ -202,8 +197,7 @@ figure{
 }
 
 /* FOOTER */
-
-footer{
+footer {
     margin-top: 30px;
     padding-bottom: 10px;
     border-top: solid 1px black;
@@ -263,7 +257,6 @@ textarea {
     margin-top:20px;
     cursor:pointer;
 }
-
 
 /* MEDIA DE CELULAR */
 @media (min-width: 320px) and (max-width:575px) {
