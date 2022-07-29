@@ -34,35 +34,30 @@ h2 {
   height: 500px;
   background-image: url(../images/home_flor.jpg);
   background-size: cover; }
-
-.main__section__principal__home {
-  align-items: center; }
-
-.main__section__principal__image {
-  width: 50%; }
-
-.main__section__principal__text {
-  text-align: center;
-  color: white; }
+  .main__section__principal__home {
+    align-items: center; }
+  .main__section__principal__image {
+    width: 50%; }
+  .main__section__principal__text {
+    text-align: center;
+    color: white; }
 
 .main__section__galeria {
   display: flex;
   flex-direction: row; }
-
-.main__section__galeria__instagram {
-  width: 50%;
-  height: 420px; }
+  .main__section__galeria__instagram {
+    width: 50%;
+    height: 420px; }
 
 .main__section__videos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center; }
-
-.main__section__videos__iframe {
-  width: 720px;
-  height: 400px;
-  margin: 5px; }
+  .main__section__videos__iframe {
+    width: 720px;
+    height: 400px;
+    margin: 5px; }
 
 .main__section__servicios__videos {
   display: grid;
@@ -107,46 +102,35 @@ h2 {
   flex-direction: row;
   justify-content: space-between; }
 
-.main__section__images.servicios {
-  justify-content: center; }
-
-.main__section__subsection__servicios {
-  padding: 5px; }
-
 h2.main__section__subsection__servicios__titulo {
   display: block;
   text-align: center;
   margin-bottom: 40px; }
-
-.main__section__subsection__servicios__descripcion {
-  margin: 0 10px 0 10px; }
-
-.main__section__subsection__images__img {
-  width: 100%;
-  height: 90%; }
 
 .main__section__subsection__images {
   position: relative;
   float: left;
   height: 300px;
   padding: 0; }
-
-.main__section__subsection__images div span {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  z-index: -1;
-  display: block;
-  width: 95%;
-  margin: 0;
-  padding: 0;
-  color: #444;
-  font-size: 18px;
-  text-decoration: none;
-  text-align: center;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  opacity: 0; }
+  .main__section__subsection__images__img {
+    width: 100%;
+    height: 90%; }
+  .main__section__subsection__images div span {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    opacity: 0; }
 
 /* ELEMENTOS DE LAS SECCIONES */
 figure {
@@ -156,10 +140,9 @@ figure {
   padding: 0;
   background: #fff;
   overflow: hidden; }
-
-figure:hover + span {
-  bottom: -30px;
-  opacity: 1; }
+  figure:hover + span {
+    bottom: -30px;
+    opacity: 1; }
 
 .hover figure img {
   opacity: 1;
@@ -235,8 +218,8 @@ textarea {
     height: 30px; }
   .header__nav {
     height: 40px; }
-  .header__nav__menu__link {
-    font-size: 10px; }
+    .header__nav__menu__link {
+      font-size: 10px; }
   .navbar-brand {
     margin-right: auto; }
   /* home */
