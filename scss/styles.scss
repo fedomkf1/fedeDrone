@@ -1,7 +1,29 @@
-/* HEADER */
-header{
+/* MIXIN */ 
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+/* EXTEND */ 
+.flex-space{
     display:flex;
     justify-content: space-around;
+}
+
+.grid-80-80{
+    display: grid;
+    @include sizes(880vw, 80vh);
+}
+
+/* MAP GET */ 
+$styles: (
+    color-border: #f6f6f6,
+    color-text: #ffffff
+);
+
+/* HEADER */
+header{
+    @extend .flex-space;
     align-items: center;
 }
 
@@ -33,7 +55,7 @@ h2{
 }
 
 .text__home__white{
-    color: white;
+    color: map-get($styles, color-text);
 }
 
 /* SECCIONES */
@@ -53,7 +75,7 @@ h2{
 
     &__text{
         text-align: center;
-        color: white;
+        color: map-get($styles, color-text);
     }
 }
 
@@ -62,15 +84,13 @@ h2{
     flex-direction: row;
 
     &__instagram{
-        width: 50%;
-        height: 420px;
+        @include sizes(50%, 420px);
     }
 }
 
 .main__section__videos{
-    display:flex;
+    @extend .flex-space;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
 
     &__iframe{
@@ -81,9 +101,7 @@ h2{
 }
 
 .main__section__servicios__videos{
-    display: grid;
-    width: 80vw;
-    height: 80vh;
+    @extend .grid-80-80;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr ;
     grid-template-areas:"obelisco texto-video texto-video"
@@ -92,9 +110,7 @@ h2{
 }          
 
 .main__section__servicios__fotos{
-    display: grid;
-    width: 80vw;
-    height: 80vh;
+    @extend .grid-80-80;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 2fr 2fr;
     grid-template-areas:"texto-foto bodega"
@@ -148,8 +164,7 @@ h2.main__section__subsection__servicios__titulo{
 	padding: 0;
 
     &__img{
-        width: 100%;
-        height: 90%;
+        @include sizes(100%, 90%);
     }
 
     div span{
@@ -173,11 +188,10 @@ h2.main__section__subsection__servicios__titulo{
 
 /* ELEMENTOS DE LAS SECCIONES */
 figure{
-	width: 350px;
-	height: 300px;
+    @include sizes(350px, 300px);
 	margin: 0;
 	padding: 0;
-	background: #fff;
+	background: map-get($styles, color-text);
 	overflow: hidden;
 
     &:hover+span{
@@ -198,11 +212,10 @@ figure{
 
 /* FOOTER */
 footer {
+    @extend .flex-space;
     margin-top: 30px;
     padding-bottom: 10px;
     border-top: solid 1px black;
-    display:flex;
-    justify-content: space-around;
     align-items: baseline;
 }
 
@@ -231,18 +244,17 @@ form {
 }
 
 input, textarea {
-    width:380px;
-    height:27px;
+    @include sizes(380px, 27px);
     background:#aaaaaa;
-    border:2px solid #f6f6f6;
+    border:2px solid map-get($styles, color-border);
     padding:10px;
     margin-top:5px;
     font-size:10px;
-    color:#ffffff;
+    color:map-get($styles, color-text);
 }
 
 input::placeholder, textarea::placeholder{
-    color:#f6f6f6;
+    color:map-get($styles, color-border);
 }
 
 textarea {
@@ -251,8 +263,7 @@ textarea {
 }
 
 #submit {
-    width:85px;
-    height:35px;
+    @include sizes(85px, 35px);
     border:none;
     margin-top:20px;
     cursor:pointer;
@@ -268,8 +279,7 @@ textarea {
     }
 
     .header__mobile{
-        display:flex;
-        justify-content: space-around;
+        @extend .flex-space;
         align-items: center;
     }
     
@@ -331,9 +341,7 @@ textarea {
 
     /* servicios */
     .main__section__servicios__videos{
-        display: grid;
-        width: 80vw;
-        height: 80vh;
+        @extend .grid-80-80;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:"texto-video"
@@ -341,9 +349,7 @@ textarea {
     }          
     
     .main__section__servicios__fotos{
-        display: grid;
-        width: 80vw;
-        height: 80vh;
+        @extend .grid-80-80;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:"texto-foto"
@@ -357,8 +363,7 @@ textarea {
 
 
     .carousel-item {
-        width: 640px; 
-        height: 360px; 
+        @include sizes(640px, 360px);
     }
 
     /* formulario */
@@ -372,8 +377,7 @@ textarea {
 
     /* videos */
     .main__section__videos__iframe{
-        width: 285px;
-        height: 160px;
+        @include sizes(285px, 160px);
     }
 }
 
