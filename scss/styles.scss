@@ -272,6 +272,11 @@ textarea {
 /* MEDIA DE CELULAR */
 @media (min-width: 320px) and (max-width:575px) {
     
+    @mixin sizes($width, $height) {
+        height: $height;
+        width: $width;
+    }
+    
     /* header */
     header{
         padding: 10px;
@@ -279,7 +284,8 @@ textarea {
     }
 
     .header__mobile{
-        @extend .flex-space;
+        display:flex;
+        justify-content: space-around;
         align-items: center;
     }
     
@@ -341,7 +347,8 @@ textarea {
 
     /* servicios */
     .main__section__servicios__videos{
-        @extend .grid-80-80;
+        display: grid;
+        @include sizes(880vw, 80vh);
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:"texto-video"
@@ -349,7 +356,8 @@ textarea {
     }          
     
     .main__section__servicios__fotos{
-        @extend .grid-80-80;
+        display: grid;
+        @include sizes(880vw, 80vh);
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:"texto-foto"
@@ -360,7 +368,6 @@ textarea {
     .instagram-media{
         min-width: 285px !important;
     }
-
 
     .carousel-item {
         @include sizes(640px, 360px);

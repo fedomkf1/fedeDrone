@@ -1,7 +1,17 @@
+/* MIXIN */
+/* EXTEND */
+.flex-space, header, .main__section__videos, footer {
+  display: flex;
+  justify-content: space-around; }
+
+.grid-80-80, .main__section__servicios__videos, .main__section__servicios__fotos {
+  display: grid;
+  height: 80vh;
+  width: 880vw; }
+
+/* MAP GET */
 /* HEADER */
 header {
-  display: flex;
-  justify-content: space-around;
   align-items: center; }
 
 .header__logo {
@@ -26,7 +36,7 @@ h2 {
   display: inline; }
 
 .text__home__white {
-  color: white; }
+  color: #ffffff; }
 
 /* SECCIONES */
 .main__section__principal {
@@ -40,19 +50,17 @@ h2 {
     width: 50%; }
   .main__section__principal__text {
     text-align: center;
-    color: white; }
+    color: #ffffff; }
 
 .main__section__galeria {
   display: flex;
   flex-direction: row; }
   .main__section__galeria__instagram {
-    width: 50%;
-    height: 420px; }
+    height: 420px;
+    width: 50%; }
 
 .main__section__videos {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center; }
   .main__section__videos__iframe {
     width: 720px;
@@ -60,17 +68,11 @@ h2 {
     margin: 5px; }
 
 .main__section__servicios__videos {
-  display: grid;
-  width: 80vw;
-  height: 80vh;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "obelisco texto-video texto-video" "obelisco reserva reserva" "obelisco reserva reserva"; }
 
 .main__section__servicios__fotos {
-  display: grid;
-  width: 80vw;
-  height: 80vh;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 2fr 2fr;
   grid-template-areas: "texto-foto bodega" "plaza-mendoza bodega"; }
@@ -113,8 +115,8 @@ h2.main__section__subsection__servicios__titulo {
   height: 300px;
   padding: 0; }
   .main__section__subsection__images__img {
-    width: 100%;
-    height: 90%; }
+    height: 90%;
+    width: 100%; }
   .main__section__subsection__images div span {
     position: absolute;
     bottom: -10px;
@@ -134,11 +136,11 @@ h2.main__section__subsection__servicios__titulo {
 
 /* ELEMENTOS DE LAS SECCIONES */
 figure {
-  width: 350px;
   height: 300px;
+  width: 350px;
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: #ffffff;
   overflow: hidden; }
   figure:hover + span {
     bottom: -30px;
@@ -157,8 +159,6 @@ footer {
   margin-top: 30px;
   padding-bottom: 10px;
   border-top: solid 1px black;
-  display: flex;
-  justify-content: space-around;
   align-items: baseline; }
 
 .footer_image {
@@ -181,8 +181,8 @@ form {
   width: 400px; }
 
 input, textarea {
-  width: 380px;
   height: 27px;
+  width: 380px;
   background: #aaaaaa;
   border: 2px solid #f6f6f6;
   padding: 10px;
@@ -198,8 +198,8 @@ textarea {
   resize: none; }
 
 #submit {
-  width: 85px;
   height: 35px;
+  width: 85px;
   border: none;
   margin-top: 20px;
   cursor: pointer; }
@@ -250,15 +250,15 @@ textarea {
   /* servicios */
   .main__section__servicios__videos {
     display: grid;
-    width: 80vw;
     height: 80vh;
+    width: 880vw;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "texto-video" "obelisco"; }
   .main__section__servicios__fotos {
     display: grid;
-    width: 80vw;
     height: 80vh;
+    width: 880vw;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "texto-foto" "bodega"; }
@@ -266,8 +266,8 @@ textarea {
   .instagram-media {
     min-width: 285px !important; }
   .carousel-item {
-    width: 640px;
-    height: 360px; }
+    height: 360px;
+    width: 640px; }
   /* formulario */
   form {
     width: 250px; }
@@ -275,8 +275,8 @@ textarea {
     width: 230px; }
   /* videos */
   .main__section__videos__iframe {
-    width: 285px;
-    height: 160px; } }
+    height: 160px;
+    width: 285px; } }
 
 /* MEDIA DE TABLET */
 @media (min-width: 576px) and (max-width: 992px) {
