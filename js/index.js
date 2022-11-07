@@ -1,7 +1,4 @@
 // Pedido de cotizacion servicio digital
-let nombre = prompt('Como te llamas?');
-alert(`Hola ${nombre}`);
-
 let continuar = true;
 let valorServicio = 0;
 
@@ -19,6 +16,18 @@ class Producto {
     }
 
 }
+
+const iniciarServicios = async () => {
+    const resp = await fetch('../data/data.json')
+    const data = await resp.json()
+
+    data.forEach((producto) => {
+
+        console.log(producto)
+    
+    })
+}
+
 
 function opcionValor(opcion, valorServicio){
 
@@ -60,27 +69,36 @@ for (const producto of productos){
     producto.sumaIva();
 }
 
-while (continuar) {
+iniciarServicios()
 
-    mostrarServiciosDisponibles();
-    let opcion = prompt('Que servicio desea?');
+
+
+
+
+
+
+
+// while (continuar) {
+
+    // mostrarServiciosDisponibles();
+    // let opcion = prompt('Que servicio desea?');
     
 
-    if(servicios.includes(opcion)){
-        valorServicio = opcionValor(opcion, valorServicio);
-        eliminar(opcion);
-        let deseaContinuar = prompt('Desea pedir otro servicio? (si/no)');
+    // if(servicios.includes(opcion)){
+    //     valorServicio = opcionValor(opcion, valorServicio);
+    //     eliminar(opcion);
+    //     let deseaContinuar = prompt('Desea pedir otro servicio? (si/no)');
         
-        if(deseaContinuar == "no"){
-            continuar = false;    
-        }
-    }
-    else{
-        alert('ingrese una opcion correcta');
-    }
+    //     if(deseaContinuar == "no"){
+    //         continuar = false;    
+    //     }
+    // }
+    // else{
+    //     alert('ingrese una opcion correcta');
+    // }
 
-    console.log(valorServicio);
-}
+    // console.log(valorServicio);
+// }
 
-alert(`${nombre}, el costo del servcio que contrataste es de: ${valorServicio}`);
-alert('Pronto recibiras un email con mas info.');
+// alert(`${nombre}, el costo del servcio que contrataste es de: ${valorServicio}`);
+// alert('Pronto recibiras un email con mas info.');
