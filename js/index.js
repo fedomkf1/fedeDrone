@@ -3,6 +3,8 @@ const contenedorServicios = document.getElementById("contenedorServicios")
 const btnCotizar = document.getElementById("btnCotizar")
 const modalCotizarDetalle = document.getElementById("modalCotizarDetalle")
 const btnAceptarCotizar = document.getElementById("btnAceptarCotizar")
+const modalFooterCotizar = document.getElementById("modalFooterCotizar")
+const closeModalCotizar = document.getElementById("closeModalCotizar")
 
 let continuar = true;
 let valorServicio = 0;
@@ -106,10 +108,10 @@ btnCotizar.addEventListener("click", () => {
 
     if (productos.length == 0) {
         modalCotizarDetalle.innerHTML = `<p> No contrato servicios</p>`
-        btnAceptarCotizar.setAttribute('disabled', '')
+        modalFooterCotizar.setAttribute('hidden', '')
     }
     else{
-        btnAceptarCotizar.removeAttribute('disabled', '')
+        modalFooterCotizar.removeAttribute('hidden', '')
         productos.forEach((producto) => {
             datosModalCotizarDetalle = datosModalCotizarDetalle + `
                 <p> ${producto.nombreServicio}: $ ${producto.precio}</p>
@@ -121,6 +123,9 @@ btnCotizar.addEventListener("click", () => {
 
 
 btnAceptarCotizar.addEventListener("click", () => {
+
+    modalFooterCotizar.setAttribute('hidden', '')
+    closeModalCotizar.setAttribute('hidden', '')
 
     modalCotizarDetalle.innerHTML = `
         <p> Muchas Gracias por contratar nuestros servicios</p>
