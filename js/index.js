@@ -29,8 +29,6 @@ const iniciarServicios = async () => {
 
     data.forEach((servicio) => {
 
-        
-        
         const itemServicio = document.createElement('div')
         itemServicio.classList.add('card', 'm-3')
         itemServicio.style.cssText += 'width: 22rem';
@@ -68,7 +66,6 @@ const iniciarServicios = async () => {
                 </div>
             </div>
         `
-
         contenedorServicios.append(itemServicio)
         const tooltip = document.getElementById("tooltip_"+servicio.id)
         const btnContratar_ = document.getElementById("btnContratar_"+servicio.id)
@@ -80,24 +77,18 @@ const iniciarServicios = async () => {
             tooltip.setAttribute('title', 'Ya Contrataste este Servicio')
             
             productos.push(new Producto(servicio.codigo, servicio.precio, servicio.detalle));
-            valorServicio = opcionValor(servicio.codigo, servicio.precio);
+            precioSumarIva(servicio.codigo);
         })
-        
     })
 }
 
-
-function opcionValor(opcion, valorServicio){
+function precioSumarIva(opcion){
 
     for (const producto of productos){
-
         if(producto.nombre == opcion){
             producto.sumaIva();
-            valorServicio = valorServicio + producto.precio;
         }
     }
-    
-    return valorServicio;
 }
 
 iniciarServicios()
@@ -112,6 +103,9 @@ btnCotizar.addEventListener("click", () => {
     }
     else{
         modalFooterCotizar.removeAttribute('hidden', '')
+
+        console.log(productos)
+
         productos.forEach((producto) => {
             datosModalCotizarDetalle = datosModalCotizarDetalle + `
                 <p> ${producto.nombreServicio}: $ ${producto.precio}</p>
@@ -121,6 +115,14 @@ btnCotizar.addEventListener("click", () => {
     }
 })
 
+function calcularValorServicio() {
+
+    productos.forEach((producto) => {
+        valorServicio = valorServicio + producto.precio
+    })
+
+    return valorServicio
+}
 
 btnAceptarCotizar.addEventListener("click", () => {
 
@@ -129,11 +131,10 @@ btnAceptarCotizar.addEventListener("click", () => {
 
     modalCotizarDetalle.innerHTML = `
         <p> Muchas Gracias por contratar nuestros servicios</p>
-        <p> El costo total del servicio es:  ${valorServicio}</p>
+        <p> El costo total del servicio es: $${calcularValorServicio()}</p>
         <p> Pronto nos pondremos en contatcto por email.</p>
         <p></p>
         <p>Saludos</p>
     `
-
     setTimeout(function () {location.reload(true)}, 5000)
 })
