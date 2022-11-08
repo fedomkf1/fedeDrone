@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nombre": "video",
+        "codigo": "video",
         "detalle": "Videos en Altura",
         "descripcionLarga": "Se realizan tomas aéreas profesionales para diversos eventos como documentales, vídeos corporativos, spots publicitarios y grandes eventos. Mediante el uso de la última tecnología en drones y equipos de filmación aérea.",
         "descripcionCorta": "Contamos con la ventaja de grabar en 4K, Full HD 50 o 60fps y en HD 120 fps.",
@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "nombre": "fotografia",
+        "codigo": "fotografia",
         "detalle": "Fotografia Aerea",
         "descripcionLarga": "Servicios profesionales de fotografía y filmaciones aéreas con el uso de drones en alta definición. Realizamos diferentes tomas aéreas con equipos de alta definición.",
         "descripcionCorta": "Las fotografías aéreas se pueden obtener en todas las situaciones de iluminación (desde el amanecer hasta el atardecer).",
@@ -21,7 +21,7 @@
     },
     {
         "id": 3,
-        "nombre": "edicion",
+        "codigo": "edicion",
         "detalle": "Edicion de Video",
         "descripcionLarga": "Editamos tu video para que puedas compartirlo en redes sociales, y puedas tener mayor impacto en tus presentaciones con videos de calidad 4k.",
         "descripcionCorta": "Nos adaptamos a tus necesidades, y compartimos mas las mejores practicas para ediciones de corto y largometrajes.",
